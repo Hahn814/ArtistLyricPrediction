@@ -63,5 +63,5 @@ if __name__ == '__main__':
                 if song.lyrics:
                     logger.info("Found: {}, Limit: {}".format(len(artist.songs), max_results))
                     track = Track(title=song.title, lyrics=song.lyrics, artist=song.artist, album=song.album, year=song.year)
-                    lyrics = track.lyrics
-                    logger.debug("'{}': '{}'".format(track.title, lyrics))
+                    for pos, _w in enumerate(track.get_words()):
+                        logger.debug("({}) - '{}': '{}'".format(pos, track.title, _w))
