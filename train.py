@@ -1,4 +1,3 @@
-#!interpreter [optional-arg]
 # -*- coding: utf-8 -*-
 __author__ = 'Paul Hahn'
 
